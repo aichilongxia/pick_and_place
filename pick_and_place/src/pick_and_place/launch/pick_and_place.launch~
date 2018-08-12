@@ -1,0 +1,8 @@
+<launch>
+
+	<node name="pick_and_place" pkg="pick_and_place"  type="pick_and_place" output="screen">
+	
+                <param name="pptype" value="true" />
+	</node>
+<!---->
+</launch>

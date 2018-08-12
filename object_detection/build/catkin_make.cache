@@ -1,0 +1,2 @@
+object_detection
+-DCATKIN_DEVEL_PREFIX=/home/lh/Moveit_control/object_detection/devel -DCMAKE_INSTALL_PREFIX=/home/lh/Moveit_control/object_detection/install -G Unix Makefiles

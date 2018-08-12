@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# creates a relay to a python script source file, acting as that file.
+# The purpose is that of a symlink
+with open("/home/lh/Moveit_control/turtlebot_arm-test/src/turtlebot_arm/arbotix_ros-indigo-devel/arbotix_python/bin/arbotix_gui", 'r') as fh:
+    exec(fh.read())

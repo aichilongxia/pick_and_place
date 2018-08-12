@@ -1,0 +1,72 @@
+#ifndef POINT_CLOUD_PREPROCESS_H_
+#define POINT_CLOUD_PREPROCESS_H_
+
+#include <pcl/point_types.h>
+#include <pcl/point_cloud.h>
+
+#include <pcl/filters/voxel_grid.h>
+
+#include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/ModelCoefficients.h>
+#include <pcl/sample_consensus/method_types.h>
+#include <pcl/sample_consensus/model_types.h>
+#include <pcl/filters/extract_indices.h>
+
+#include <pcl/filters/passthrough.h>
+
+#include <pcl/keypoints/harris_3d.h>
+#include <Eigen/Eigen>
+#include <Eigen/Geometry>
+#include <Eigen/Dense>
+
+#include <assert.h>
+
+typedef pcl::PointXYZRGB PointT;
+typedef pcl::PointCloud<PointT> PointCloudT;
+
+class pointCloudPreprocess
+{
+private:
+	//执行点云预处理的pcl对象
+	pcl::VoxelGrid<PointT> downsample_;   //下采样滤波器
+
+	pcl::SACSegmentation<PointT> plane_remove_;   //平面滤除相关数据对象
+	pcl::ModelCoefficients::Ptr   coefficients_;
+	pcl::PointIndices::Ptr       inliers_;
+	pcl::ExtractIndices<PointT>  ei_;  //该对象根据索引值执行具体的点云分割
+
+	pcl::PassThrough<PointT>  pass_through_; //直通滤波器
+
+	pcl::HarrisKeypoint3D<pcl::PointXYZRGB,pcl::PointXYZI> harris_; //角点提取数据对象
+
+	//data
+    double voxel_leaf_size_;        //downsample parameter
+
+    double sac_distance_threshold_; //palne remove parameter
+    double sac_max_iterations_;
+    double sac_probability_;
+
+	double passthrough_x_max_;      //passthrough filters parameters
+	double passthrough_x_min_;
+	double passthrough_y_max_;
+	double passthrough_y_min_;
+	double passthrough_z_max_;
+	double passthrough_z_min_;
+
+	PointCloudT::Ptr cloud_original_;
+	PointCloudT::Ptr cloud_processed_;
+
+	bool param_setted_;
+
+public:
+	pointCloudPreprocess();	
+	void setInputCloud(PointCloudT::Ptr);
+	void setPreProcessedParam(double, 
+		                      double, double, double,
+		                      double, double, double, double, double, double
+		                     );
+	void executePreprocess(PointCloudT::Ptr, PointCloudT::Ptr, pcl::ModelCoefficients::Ptr);
+	
+};
+#endif
+

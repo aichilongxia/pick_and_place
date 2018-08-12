@@ -1,0 +1,8 @@
+prefix=/home/lh/Moveit_control/object_detection/install
+
+Name: object_localization
+Description: Description of object_localization
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lh/Moveit_control/object_detection/install/lib 
+Requires: 

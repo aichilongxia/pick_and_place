@@ -1,0 +1,8 @@
+prefix=/home/lh/Moveit_control/pick_and_place/install
+
+Name: pick_and_place
+Description: Description of pick_and_place
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lh/Moveit_control/pick_and_place/install/lib 
+Requires: moveit_core moveit_ros_planning_interface interactive_markers tf roscpp visualization_msgs arbotix_msgs std_msgs

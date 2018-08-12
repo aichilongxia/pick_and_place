@@ -1,0 +1,8 @@
+prefix=/home/lh/Moveit_control/turtlebot_arm-test/devel
+
+Name: turtlebot_arm_bringup
+Description: Description of turtlebot_arm_bringup
+Version: 0.3.3
+Cflags: 
+Libs: -L/home/lh/Moveit_control/turtlebot_arm-test/devel/lib 
+Requires: 

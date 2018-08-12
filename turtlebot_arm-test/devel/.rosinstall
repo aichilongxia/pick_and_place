@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lh/Moveit_control/turtlebot_arm-test/devel/setup.sh

@@ -1,0 +1,22 @@
+<launch>
+
+  <node name="object_localization" pkg="object_localization" type="object_localization" output="screen">
+    <param name="gripper_tip_x" value="-0.002" />
+    <param name="gripper_tip_y" value="0.020" />
+    <param name="gripper_tip_z" value="-0.0185" />
+    <param name="checkerboard_height" value="8" />
+    <param name="checkerboard_grid" value="0.024" />
+    <param name="sac_distance_threshold" value="0.01" />
+    <param name="passthrough_x_max" value="0.50"/>
+    <param name="passthrough_x_min" value="0.2"/>
+    <param name="passthrough_y_max" value="0.15"/>
+    <param name="passthrough_y_min" value="-0.15"/>
+    <param name="passthrough_z_max" value="0.55"/>
+    <param name="passthrough_z_min" value="0.35"/>
+    <param name="voxel_leaf_size" value="0.005" />
+    <param name="cluster_tolerance" value="0.005" />
+    <param name="max_cluster_size" value="600" />
+    <param name="min_cluster_size" value="28" />
+  </node>
+
+</launch>

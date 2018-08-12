@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/lh/Moveit_control/pick_and_place/build/gtest/src -lpthread -Wl,-rpath,/home/lh/Moveit_control/pick_and_place/build/gtest/src 

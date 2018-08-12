@@ -1,0 +1,8 @@
+prefix=/home/lh/Moveit_control/turtlebot_arm-test/install
+
+Name: arbotix_msgs
+Description: Description of arbotix_msgs
+Version: 0.10.0
+Cflags: -I/home/lh/Moveit_control/turtlebot_arm-test/install/include
+Libs: -L/home/lh/Moveit_control/turtlebot_arm-test/install/lib 
+Requires: message_runtime std_msgs

@@ -1,0 +1,2 @@
+pick_and_place
+-DCATKIN_DEVEL_PREFIX=/home/lh/Moveit_control/pick_and_place/devel -DCMAKE_INSTALL_PREFIX=/home/lh/Moveit_control/pick_and_place/install -G Unix Makefiles

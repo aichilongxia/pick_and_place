@@ -1,0 +1,8 @@
+prefix=/home/lh/Moveit_control/turtlebot_arm-test/install
+
+Name: turtlebot_arm_block_manipulation
+Description: Description of turtlebot_arm_block_manipulation
+Version: 0.3.3
+Cflags: -I/home/lh/Moveit_control/turtlebot_arm-test/install/include
+Libs: -L/home/lh/Moveit_control/turtlebot_arm-test/install/lib 
+Requires: actionlib actionlib_msgs interactive_markers pcl_ros roscpp visualization_msgs arbotix_msgs moveit_core moveit_ros_planning_interface

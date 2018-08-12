@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lh/Moveit_control/pick_and_place/install/setup.sh
